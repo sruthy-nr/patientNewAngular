@@ -13,4 +13,7 @@ export class ApiService {
   viewPatient=()=>{
     return this.http.get("http://localhost:8080/view")
   }
+  searchPatient=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/search",dataToSend)
+  }
 }
